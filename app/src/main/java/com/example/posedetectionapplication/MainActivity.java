@@ -222,8 +222,8 @@ public class MainActivity extends AppCompatActivity {
                                                 PoseLandmark rightMouth = pose.getPoseLandmark(PoseLandmark.RIGHT_MOUTH);
                                                 double rightHipAngle = getAngle(
                                                         leftHip,
-                                                        leftWrist,
-                                                        leftShoulder);
+                                                        leftShoulder,
+                                                       leftWrist );
 
 
                                                 angleis.setText("Angle: " + rightHipAngle);
