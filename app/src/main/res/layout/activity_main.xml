@@ -24,31 +24,62 @@
 
     <TextView
         android:id="@+id/angleis"
-        android:layout_below="@+id/btnImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btnImg"
         android:layout_margin="10dp"
         android:text="" />
 
     <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-android:layout_below="@+id/image"
-        android:layout_height="100dp"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:orientation="vertical">
 
+<!--        <ImageView-->
+<!--            android:id="@+id/imagecolr"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imagecolr2"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+
+<!--            />-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imagecolr3"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imagecolr4"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+
+<!--            />-->
         <ImageView
-            android:id="@+id/imagecolr"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/imagecolr6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            />
+        <ImageView
+            android:id="@+id/imagecolr5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
 
             />
 
-        <ImageView
-            android:id="@+id/imagecolr2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
 
-            />
     </LinearLayout>
 
 </RelativeLayout>

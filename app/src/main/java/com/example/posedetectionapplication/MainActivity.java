@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     Bitmap workingBitmap;
     Paint paint;
     ObjectDetectorOptions optionsare;
-    ImageView imageView1, imageView2;
+    ImageView imageView1, imageView2, imageView3, imageView4, imageView5, imageView6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +74,12 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.image);
         btnImg = findViewById(R.id.btnImg);
         angleis = findViewById(R.id.angleis);
-        imageView1 = findViewById(R.id.imagecolr);
-        imageView2 = findViewById(R.id.imagecolr2);
+//        imageView1 = findViewById(R.id.imagecolr);
+//        imageView2 = findViewById(R.id.imagecolr2);
+//        imageView3 = findViewById(R.id.imagecolr3);
+//        imageView4 = findViewById(R.id.imagecolr4);
+        imageView5 = findViewById(R.id.imagecolr5);
+        imageView6 = findViewById(R.id.imagecolr6);
 
         btnImg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -237,49 +241,49 @@ public class MainActivity extends AppCompatActivity {
                                                 canvas = new Canvas(mutableBitmap);
 //                                                drawpoint(imageView, leftEye.getPosition3D().getX(), leftEye.getPosition3D().getY(), 5);
                                                 if (rightEye != null) {
-                                                    drawpoint(imageView, rightEye.getPosition3D().getX(), rightEye.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightEye.getPosition3D().getX(), rightEye.getPosition3D().getY(), 2);
                                                 }
                                                 if (nose != null) {
-                                                    drawpoint(imageView, nose.getPosition3D().getX(), nose.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, nose.getPosition3D().getX(), nose.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftEye != null) {
-                                                    drawpoint(imageView, leftEye.getPosition3D().getX(), leftEye.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftEye.getPosition3D().getX(), leftEye.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftMouth != null) {
-                                                    drawpoint(imageView, leftMouth.getPosition3D().getX(), leftMouth.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftMouth.getPosition3D().getX(), leftMouth.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightMouth != null) {
-                                                    drawpoint(imageView, rightMouth.getPosition3D().getX(), rightMouth.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightMouth.getPosition3D().getX(), rightMouth.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightEar != null) {
-                                                    drawpoint(imageView, rightEar.getPosition3D().getX(), rightEar.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightEar.getPosition3D().getX(), rightEar.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftEar != null) {
-                                                    drawpoint(imageView, leftEar.getPosition3D().getX(), leftEar.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftEar.getPosition3D().getX(), leftEar.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightShoulder != null) {
-                                                    drawpoint(imageView, rightShoulder.getPosition3D().getX(), rightShoulder.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightShoulder.getPosition3D().getX(), rightShoulder.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftShoulder != null) {
-                                                    drawpoint(imageView, leftShoulder.getPosition3D().getX(), leftShoulder.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftShoulder.getPosition3D().getX(), leftShoulder.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftElbow != null) {
-                                                    drawpoint(imageView, leftElbow.getPosition3D().getX(), leftElbow.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftElbow.getPosition3D().getX(), leftElbow.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightElbow != null) {
-                                                    drawpoint(imageView, rightElbow.getPosition3D().getX(), rightElbow.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightElbow.getPosition3D().getX(), rightElbow.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftWrist != null) {
-                                                    drawpoint(imageView, leftWrist.getPosition3D().getX(), leftWrist.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftWrist.getPosition3D().getX(), leftWrist.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightWrist != null) {
-                                                    drawpoint(imageView, rightWrist.getPosition3D().getX(), rightWrist.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightWrist.getPosition3D().getX(), rightWrist.getPosition3D().getY(), 2);
                                                 }
                                                 if (leftAnkle != null) {
-                                                    drawpoint(imageView, leftAnkle.getPosition3D().getX(), leftAnkle.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, leftAnkle.getPosition3D().getX(), leftAnkle.getPosition3D().getY(), 2);
                                                 }
                                                 if (rightAnkle != null) {
-                                                    drawpoint(imageView, rightAnkle.getPosition3D().getX(), rightAnkle.getPosition3D().getY(), 3);
+                                                    drawpoint(imageView, rightAnkle.getPosition3D().getX(), rightAnkle.getPosition3D().getY(), 2);
                                                 }
                                                 ObjectDetector objectDetector = ObjectDetection.getClient(optionsare);
                                                 InputImage image = InputImage.fromBitmap(thumbnail, 0);
@@ -292,7 +296,8 @@ public class MainActivity extends AppCompatActivity {
                                                                         paint.setColor(Color.YELLOW);
                                                                         paint.setStrokeWidth(1);    // Task completed successfully
                                                                         paint.setStyle(Paint.Style.STROKE);    // Task completed successfully
-                                                                        Toast.makeText(MainActivity.this, "DPONE", Toast.LENGTH_SHORT).show();
+                                                                        Toast.makeText(MainActivity.this, "DONE", Toast.LENGTH_SHORT).show();
+
                                                                         for (DetectedObject detectedObject : detectedObjects) {
                                                                             Rect boundingBox = detectedObject.getBoundingBox();
 
@@ -322,15 +327,22 @@ public class MainActivity extends AppCompatActivity {
                 Palette.Builder p = new Palette.Builder(thumbnail);
                 p.generate(new Palette.PaletteAsyncListener() {
                     @Override
+
                     public void onGenerated(@Nullable Palette palette) {
-                        String[] strings = palette.toString().split("@");
-                        Log.e("TGED", "STRINF" + palette.toString());//                        imageView1.setBackgroundColor(Integer.valueOf(strings[1]));
-                        Log.e("TGED", "STRINF" + strings[1]);//
-                        String s = "#" + strings[1];
-                        Log.e("TGED", "s" + s);//
-                        int color = Integer.parseInt(strings[1], 16)+0xFF000000;
-                        imageView1.setBackgroundColor(color);
-//                        imageView2 = findViewById(R.id.imagecolr2);
+                        int defaultValue = 0x000000;
+                        int vibrant = palette.getVibrantColor(defaultValue);
+                        int vibrantLight = palette.getLightVibrantColor(defaultValue);
+                        int vibrantDark = palette.getDarkVibrantColor(defaultValue);
+                        int muted = palette.getMutedColor(defaultValue);
+                        int mutedLight = palette.getLightMutedColor(defaultValue);
+                        int mutedDark = palette.getDarkMutedColor(defaultValue);
+//                        imageView1.setBackgroundColor(vibrant);
+//
+//                        imageView2 .setBackgroundColor(vibrantLight);
+//                        imageView3 .setBackgroundColor(vibrantDark);
+//                        imageView4 .setBackgroundColor(muted);
+                        imageView5.setBackgroundColor(mutedLight);
+                        imageView6.setBackgroundColor(mutedDark);
 
                     }
                 });
